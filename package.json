@@ -1,0 +1,14 @@
+{
+  "name": "S3_API",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "0.12.7"
+  },
+  "dependencies": {
+    "express": "3.21.1",
+    "ejs": "2.3.3",
+    "aws-sdk": "2.1.39",
+    "multer": "0.1.8"
+  }
+}
