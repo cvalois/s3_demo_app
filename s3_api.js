@@ -29,10 +29,9 @@ app.use(multer({
 }));
 
 // Scality S3 Credentials
-//var ACCESS_KEY     = "accessKey1";
-//var SECRET_KEY     = "verySecretKey1";
-var ACCESS_KEY     = "WLTH1XQH9EKCZPIS1PQB"
-var SECRET_KEY     = "WWFsGN6e=5RyPqt9xC6GfJ9BXVq6PuQKALLAaMlE"
+var ACCESS_KEY     = "accessKey1";
+var SECRET_KEY     = "verySecretKey1";
+
 
 // Configure credentials to be used by
 // the node AWS-SDK for all REST calls
@@ -43,9 +42,8 @@ aws.config.update({ s3ForcePathStyle: true }); // added this
 
 // Set Scality S3 endpoint used by the node AWS-SDK
 
-//var ep = new aws.Endpoint('http://localhost:32768/');
-var ep = new aws.Endpoint('http://144.217.45.143:80/');
-//var ep = new aws.Endpoint('http://34.227.176.213:8000/');
+var ep = new aws.Endpoint('http://localhost:32768/');
+
 //var s3 = new aws.S3({endpoint: ep});
 var s3 = new aws.S3({endpoint: ep, s3ForcePathStyle: true});
 
@@ -141,8 +139,8 @@ app.post("/add_object", function(req, res) {
 
 
   //var ep = new aws.Endpoint('http://localhost:8000/');
-  //var ep = new aws.Endpoint('http://localhost:32768/');
-  var ep = new aws.Endpoint('http://144.217.45.143:80/');
+  var ep = new aws.Endpoint('http://localhost:32768/');
+  
   var body = fs.readFileSync(FILEPATH);
 
 
